@@ -1,0 +1,172 @@
+10-1 실행 순서에 따른 문서 객체 사용 오류
+1. 스크립트 태그 위치 옮기기
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+Document Object Model
+        </title>
+    </head>
+    <body>
+        <h1>Process - 1</h1>
+        <h2>Process - 2</h2>
+        <script>
+            // 테그의 배경 색상 변경
+            document.querySelector('h1').style.backgroundColor ='red';
+            // 태그의 글자 색상 변경
+            document.querySelector('h2').style.color ='blue';
+        </script>
+    </body>
+</html>
+
+
+2.이벤트 활용하기
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+Document Object Model
+        </title>
+    </head>
+    <body>
+        <h1>Process - 1</h1>
+        <h2>Process - 2</h2>
+        <script>
+            window.onload =function() {
+                // 테그의 배경 색상 변경
+                document.querySelector('h1').style.backgroundColor ='red';
+                // 태그의 글자 색상 변경
+                document.querySelector('h2').style.color ='blue';
+};
+        </script>
+    </body>
+</html>
+
+10-2
+ getElementByld() 사용하여 문서 객체 선택하기
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Document Basic
+        </title>
+        <script>
+           //이벤트 연결
+           window.onload =function() {
+            //문서 객체 선택
+            var bbb =document.getElementById('aaa');
+            //문서 객체 조직
+            bbb.style.color ='orange';
+            bbb.style.background ='red';
+            bbb.innerHTML ='From, Java';
+};
+        </script>
+    </head>
+    <body>
+        <h1 id'aaa'>Header</h1>>
+    </body>
+</html>
+
+querySelector 사용하기
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+Document Basic
+        </title>
+        <script>
+           //이벤트 연결
+           window.onload =function() {
+            //문서 객체 선택
+            var bbb =document.querySelector('h1');
+            //문서 객체 조직
+            bbb.style.color ='orange';
+            bbb.style.background ='red';
+            bbb.innerHTML ='From, Java';
+};
+        </script>
+    </head>
+    <body>
+        <h1>Header</h1>>
+        <h1>Header</h1>>
+        <h1>Header</h1>>
+    </body>
+</html>
+
+문서 CP 여러개 선택
+�<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM Basic</title>
+        <script>
+            // 이벤트를 연결합니다.
+            window.onload =function() {
+                // 문서 객체를 선택합니다.
+                var headers =document.querySelectorAll('h1');
+                for(var i =0; i <headers.length; i++) {
+                    // 변수를 선언합니다.
+                    var header =headers[i];
+   
+                    // 문서 객체를 조작합니다.
+                    header.style.color ='orange';
+                    header.style.background ='red';
+                    header.innerHTML ='From JavaScript';
+}
+};
+        </script>
+    </head>
+    <body>
+        <h1>Header</h1>
+            <h1>Header</h1>
+        <h1>Header</h1>
+    </body>
+</html>
+
+10-4 스타일 조작
+�<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Basic</title>
+    <script>
+        // 이벤트를 연결합니다.
+        window.onload =function() {
+            // 문서 객체를 추가합니다.
+            var output ='';
+            for(var i =0; i <256; i++) {
+                output +='<div></div>';
+}
+            document.body.innerHTML =output;
+            // 문서 객체를 선택합니다.
+            var divs =document.querySelectorAll('div');
+            for(var i =0; i <divs.length; i++) {
+                // 변수를 선언합니다.
+                var div =divs[i];
+                // 스타일을 적용합니다.
+                div.style.height ='2px';
+                div.style.background ='rgb('+i +','+i +','+i +')';
+}
+};
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
