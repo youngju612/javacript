@@ -1,0 +1,33 @@
+1.
+
+let number = 273;
+let string = '안녕하세요';
+let boolean = true;
+
+
+console.log(typeof number);
+console.log(typeof string);
+console.log(typeof boolean);
+
+2.
+
+let number = 273.52103352;
+
+console.log(number.toFixed(1))
+console.log(number.toFixed(4))
+
+3.
+
+let string = 'abcdefg';
+
+string.toUpperCase();
+console.log(string);
+
+4.
+
+let string = '안녕하세요. 좋은 아침입니다.';
+
+if (string.indexOf('아침') >=0) {
+    console.log('좋은 아침이에요...!')
+}
+
